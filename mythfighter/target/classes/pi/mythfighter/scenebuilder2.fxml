@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="Head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.mythfighter.HelloController">
+   <children>
+      <Button fx:id="HomeButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#goToPage" text="Home" />
+      <Button fx:id="QuitButton" layoutX="534.0" layoutY="13.0" mnemonicParsing="false" onAction="#goToPage" text="Quit" />
+      <ImageView fx:id="Title" fitHeight="38.0" fitWidth="200.0" layoutX="199.0" layoutY="7.0">
+         <image>
+            <Image url="@cooltext426783335742108.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="ItemEdit" layoutX="1.0" layoutY="53.0" prefHeight="347.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="26.0" layoutY="41.0" prefHeight="17.0" prefWidth="46.0" text="Name:" />
+            <Label fx:id="EnameItem" layoutX="110.0" layoutY="41.0" text="Label" />
+            <TextField fx:id="EnameFieldItem" layoutX="404.0" layoutY="37.0" />
+            <TextField fx:id="ErarityFieldItem" layoutX="404.0" layoutY="65.0" />
+            <TextField fx:id="EquantFieldItem" layoutX="404.0" layoutY="96.0" />
+            <TextField fx:id="EtypeFieldItem" layoutX="404.0" layoutY="131.0" />
+            <Button fx:id="StatsSaveItem" layoutX="265.0" layoutY="300.0" mnemonicParsing="false" text="Save Stats" />
+            <Label layoutX="25.0" layoutY="65.0" prefHeight="25.0" prefWidth="49.0" text="Rarity" />
+            <Label fx:id="ErarityItem" layoutX="111.0" layoutY="69.0" text="Label" />
+            <Label layoutX="25.0" layoutY="100.0" prefHeight="17.0" prefWidth="49.0" text="Quantity" />
+            <Label fx:id="EquantItem" layoutX="111.0" layoutY="100.0" text="Label" />
+            <Label layoutX="27.0" layoutY="135.0" prefHeight="17.0" prefWidth="45.0" text="Type" />
+            <Label fx:id="EtypeItem" layoutX="110.0" layoutY="135.0" text="Label" />
+            <Label layoutX="26.0" layoutY="167.0" prefHeight="17.0" prefWidth="46.0" text="Armor" />
+            <Label fx:id="EarmorItem" layoutX="110.0" layoutY="167.0" text="Label" />
+            <Label layoutX="25.0" layoutY="200.0" prefHeight="17.0" prefWidth="80.0" text="Damage MIN" />
+            <Label fx:id="EdminItem" layoutX="110.0" layoutY="200.0" text="Label" />
+            <Label layoutX="25.0" layoutY="234.0" prefHeight="17.0" prefWidth="92.0" text="Damage MAX" />
+            <Label fx:id="EdmaxItem" layoutX="110.0" layoutY="234.0" text="Label" />
+            <TextField fx:id="EdminFieldItem" layoutX="404.0" layoutY="196.0" />
+            <TextField fx:id="EdmaxFieldItem" layoutX="404.0" layoutY="230.0" />
+            <TextField fx:id="EarmorFieldItem" layoutX="404.0" layoutY="163.0" />
+            <ListView fx:id="ItemListEdit" layoutX="185.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ZoneEdit" layoutX="-1.0" layoutY="53.0" prefHeight="347.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="61.0" layoutY="38.0" prefHeight="17.0" prefWidth="46.0" text="Name:" />
+            <Label fx:id="ElevelZone" layoutX="132.0" layoutY="75.0" text="Label" />
+            <Label fx:id="EnameZone" layoutX="132.0" layoutY="38.0" text="Label" />
+            <Label layoutX="61.0" layoutY="75.0" prefHeight="17.0" prefWidth="46.0" text="Level:" />
+            <TextField fx:id="EnameFieldZone" layoutX="357.0" layoutY="34.0" />
+            <TextField fx:id="ElevelFieldZone" layoutX="357.0" layoutY="71.0" />
+            <Button fx:id="SaveStatsZone" layoutX="265.0" layoutY="270.0" mnemonicParsing="false" text="Save Stats" />
+            <ListView fx:id="ZoneMobs" layoutX="32.0" layoutY="103.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="AllMobs" layoutX="375.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="ADDMOB" layoutX="265.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="ADD MOB" />
+            <Button fx:id="REMOVEMOB" layoutX="252.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="REMOVE MOB" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MobEdit" layoutX="-3.0" layoutY="53.0" prefHeight="347.0" prefWidth="608.0" visible="false">
+         <children>
+            <Label fx:id="EhpMob" layoutX="132.0" layoutY="174.0" text="Label" />
+            <Label fx:id="EdamageMob" layoutX="132.0" layoutY="140.0" text="Label" />
+            <Label layoutX="59.0" layoutY="75.0" prefHeight="17.0" prefWidth="46.0" text="Name:" />
+            <Label fx:id="ElevelMob" layoutX="132.0" layoutY="108.0" text="Label" />
+            <Label fx:id="EnameMob" layoutX="132.0" layoutY="75.0" text="Label" />
+            <Label layoutX="59.0" layoutY="174.0" prefHeight="17.0" prefWidth="49.0" text="Health:" />
+            <Label layoutX="59.0" layoutY="140.0" text="Damage" />
+            <Label layoutX="59.0" layoutY="108.0" prefHeight="17.0" prefWidth="46.0" text="Level:" />
+            <TextField fx:id="ENameFieldMob" layoutX="351.0" layoutY="71.0" />
+            <TextField fx:id="ElevelFieldMob" layoutX="351.0" layoutY="104.0" />
+            <TextField fx:id="EdamageFieldMob" layoutX="351.0" layoutY="136.0" />
+            <TextField fx:id="EhpFieldMob" layoutX="351.0" layoutY="170.0" />
+            <Button fx:id="StatsSaveMob" layoutX="265.0" layoutY="270.0" mnemonicParsing="false" text="Save Stats" />
+            <Label layoutX="50.0" layoutY="203.0" prefHeight="17.0" prefWidth="65.0" text="Experience:" />
+            <Label fx:id="EexpMob" layoutX="132.0" layoutY="203.0" text="Label" />
+            <TextField fx:id="EexpFieldMob" layoutX="351.0" layoutY="199.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PlayerEdit" layoutX="-1.0" layoutY="55.0" prefHeight="347.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label fx:id="Ehp" layoutX="132.0" layoutY="174.0" text="Label" />
+            <Label fx:id="Estr" layoutX="132.0" layoutY="140.0" text="Label" />
+            <Label layoutX="59.0" layoutY="75.0" prefHeight="17.0" prefWidth="46.0" text="Name:" />
+            <Label fx:id="Elevel" layoutX="132.0" layoutY="108.0" text="Label" />
+            <Label fx:id="Ename" layoutX="132.0" layoutY="75.0" text="Label" />
+            <Label layoutX="59.0" layoutY="174.0" prefHeight="17.0" prefWidth="49.0" text="Health:" />
+            <Label layoutX="59.0" layoutY="140.0" text="Strength:" />
+            <Label layoutX="59.0" layoutY="108.0" prefHeight="17.0" prefWidth="46.0" text="Level:" />
+            <TextField fx:id="EnameField" layoutX="351.0" layoutY="71.0" />
+            <TextField fx:id="ElevelField" layoutX="351.0" layoutY="104.0" />
+            <TextField fx:id="EstrField" layoutX="351.0" layoutY="136.0" />
+            <TextField fx:id="EhpField" layoutX="351.0" layoutY="170.0" />
+            <Button fx:id="StatsSave" layoutX="265.0" layoutY="270.0" mnemonicParsing="false" text="Save Stats" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Admin" layoutX="-3.0" layoutY="53.0" prefHeight="347.0" prefWidth="608.0" visible="false">
+         <children>
+            <Button fx:id="EditPlayer" layoutX="272.0" layoutY="117.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="25.0" prefWidth="65.0" text="Player" />
+            <Button fx:id="EditMob" layoutX="272.0" layoutY="161.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="25.0" prefWidth="65.0" text="Mob" />
+            <Button fx:id="EditZone" layoutX="272.0" layoutY="204.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="25.0" prefWidth="65.0" text="Zone" />
+            <Button fx:id="EditItem" layoutX="272.0" layoutY="249.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="25.0" prefWidth="65.0" text="Item" />
+            <ImageView fitHeight="50.0" fitWidth="500.0" layoutX="61.0" layoutY="3.0">
+               <image>
+                  <Image url="@cooltext427041023702901.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Home" layoutY="53.0" prefHeight="347.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="ExploreButton" layoutX="216.0" layoutY="116.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="38.0" prefWidth="168.0" text="Explore" />
+            <Button fx:id="AdminButton" layoutX="14.0" layoutY="308.0" mnemonicParsing="false" onAction="#goToPage" text="Admin" />
+            <Button fx:id="InventoryButton" layoutX="216.0" layoutY="174.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="38.0" prefWidth="168.0" text="Inventory" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Zone" layoutX="-4.0" layoutY="53.0" prefHeight="347.0" prefWidth="608.0" visible="false">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="200.0" layoutX="204.0" layoutY="25.0">
+               <image>
+                  <Image url="@cooltext426783552104042.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ForestButton" layoutX="237.0" layoutY="97.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="37.0" prefWidth="150.0" text="Forest" />
+            <Button layoutX="239.0" layoutY="149.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Desert" />
+            <Button layoutX="238.0" layoutY="201.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Mountain" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Explore" layoutX="1.0" layoutY="55.0" prefHeight="347.0" prefWidth="600.0" visible="false">
+         <children>
+            <ImageView fx:id="Mob_image" fitHeight="151.0" fitWidth="200.0" layoutX="200.0" layoutY="14.0">
+               <image>
+                  <Image url="@purepng.com-goblingoblincreatureeuropean-folkloredemonghost-1701527776591qci25.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="Mob_name" alignment="CENTER" layoutX="226.0" layoutY="174.0" text="Goblin" />
+            <TextField fx:id="Mob_Level" alignment="CENTER" layoutX="226.0" layoutY="199.0" text="Level:5" />
+            <Button fx:id="FightButton" layoutX="246.0" layoutY="231.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="37.0" prefWidth="92.0" text="Fight" />
+            <Button fx:id="Run1Button" layoutX="246.0" layoutY="275.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="37.0" prefWidth="92.0" text="Run" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Combat" layoutX="1.0" layoutY="55.0" prefHeight="347.0" prefWidth="600.0" visible="false">
+         <children>
+            <Button fx:id="Run2Button" layoutX="268.0" layoutY="302.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="25.0" prefWidth="65.0" text="Run" />
+            <TextArea fx:id="Turns" layoutX="193.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+            <ImageView fx:id="Mob_image2" fitHeight="140.0" fitWidth="200.0" layoutX="393.0" layoutY="52.0">
+               <image>
+                  <Image url="@purepng.com-goblingoblincreatureeuropean-folkloredemonghost-1701527776591qci25.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Player_Image" fitHeight="200.0" fitWidth="73.0" layoutX="61.0" layoutY="14.0">
+               <image>
+                  <Image url="@3KoVte-knight-warrior-photos.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="LootButton" layoutX="268.0" layoutY="239.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Loot" />
+            <Button fx:id="ContinueButton" layoutX="268.0" layoutY="271.0" mnemonicParsing="false" onAction="#goToPage" prefHeight="25.0" prefWidth="65.0" text="Continue" />
+            <Label fx:id="PlayerHP" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="227.0" prefHeight="25.0" prefWidth="136.0" />
+            <Label fx:id="MobHP" alignment="CENTER" layoutX="425.0" layoutY="223.0" prefHeight="25.0" prefWidth="136.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Inventory" layoutY="55.0" prefHeight="347.0" prefWidth="600.0" visible="false">
+         <children>
+            <Button fx:id="DropButton" layoutX="461.0" layoutY="77.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="80.0" text="Drop" />
+            <Button fx:id="EquipButton" layoutX="461.0" layoutY="198.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="80.0" text="Equip" />
+            <ListView fx:id="InventoryList" editable="true" layoutX="190.0" layoutY="12.0" prefHeight="310.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
